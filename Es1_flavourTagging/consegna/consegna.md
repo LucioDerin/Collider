@@ -62,4 +62,4 @@ Provo ad esegure lo scatterplot delle prime due componenti principali per vedere
 <img src="2PC.png" alt="drawing" width="200"/>
 </center>
 
-[Codice completo e ulteriori osservazioni](https://github.com/LucioDerin/Collider)
+Codice completo e ulteriori osservazioni nel file [es1.ipynb](https://github.com/LucioDerin/Collider) in questa repository (sottocartella Es1_flavourTagging).

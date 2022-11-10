@@ -28,11 +28,11 @@ Lucio Derin
 Per limiti di potenza di calcolo, tutti i seguenti algoritmi sono stati allenati su un campione di **1000 dati** provenienti dal dataset ridotto a **6 dimensioni**.
 
 - lSVM: SVM lineare;
-    - Complessità predizione: $O(d^2)$, con d numero di features;
+    - Complessità predizione: O(d^2), con d numero di features;
 - kSVM: SVM con kernel trick;
     - Piccola fase di model selection con Cross-Validation per regolare i parametri del kernel e di regolarizzazione;
     - Kernel gaussiano;
-    - Complessità predizione: $O(N^2)$, con $N$ cardinalità training set;
+    - Complessità predizione: O(N^2), con N cardinalità training set;
 - NN: rete neurale semplice e non ottimizzata, con 6 layer e 32 o 64 neuroni per layer;
     - Ottimizzatore: Adam;
     - Activation Function: ReLU e Sigmoid nel layer di output;
@@ -50,7 +50,7 @@ Per limiti di potenza di calcolo, tutti i seguenti algoritmi sono stati allenati
 </center>
 
 **Osservazioni:**
-- Seppur allenati su molti meno dati (ma con 2 feature in più), gli algoritmi lSVM,SVM e NN superano BDT;
+- Seppur allenati su molti meno dati (ma con 2 feature in più), gli algoritmi lSVM, kSVM e NN superano BDT;
 - kSVM non offre grandi purezze a basse efficienze di segnale (curioso, fenomeno probabilmente dovuto ad un po' di overfitting) ma offre purezze comparabili a mv2 ad alte efficienze di segnale;
 - lSVM offre grande purezza e grande stabilità a basse efficienze di segnale, poi degrada (discorso opposto a kSVM: essendo un modello più semplice ha poco overfitting ma poi va in underfitting);
 - La NN lavora bene ad altissime efficienze di segnale: lì la funzione target deve essere molto complicata, dato che kSVM e NN riescono ad approssimarla (mentre lSVM no).
